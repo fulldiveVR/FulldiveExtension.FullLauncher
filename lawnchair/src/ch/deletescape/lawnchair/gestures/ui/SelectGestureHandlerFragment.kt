@@ -21,10 +21,10 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.support.v7.preference.PreferenceDialogFragmentCompat
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.appcompat.app.AlertDialog
+import androidx.preference.PreferenceDialogFragmentCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import ch.deletescape.lawnchair.applyAccent
 import ch.deletescape.lawnchair.gestures.GestureController
@@ -48,7 +48,8 @@ class SelectGestureHandlerFragment : PreferenceDialogFragmentCompat() {
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.list)
         recyclerView.adapter = HandlerListAdapter(activity as Context, isSwipeUp, currentClass, ::onSelectHandler)
-        recyclerView.layoutManager = LinearLayoutManager(activity)
+        recyclerView.layoutManager =
+                LinearLayoutManager(activity)
     }
 
     fun onSelectHandler(handler: GestureHandler) {

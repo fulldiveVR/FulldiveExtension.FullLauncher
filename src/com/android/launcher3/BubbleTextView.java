@@ -27,7 +27,8 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v4.graphics.ColorUtils;
+import android.util.Log;
+import androidx.core.graphics.ColorUtils;
 import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
@@ -46,7 +47,6 @@ import ch.deletescape.lawnchair.LawnchairUtilsKt;
 import ch.deletescape.lawnchair.colors.ColorEngine;
 import ch.deletescape.lawnchair.colors.ColorEngine.ResolveInfo;
 import ch.deletescape.lawnchair.colors.ColorEngine.Resolvers;
-import ch.deletescape.lawnchair.colors.resolvers.DrawerLabelAutoResolver;
 import ch.deletescape.lawnchair.font.CustomFontManager;
 import ch.deletescape.lawnchair.gestures.BlankGestureHandler;
 import ch.deletescape.lawnchair.gestures.GestureController;
@@ -244,6 +244,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
     }
 
     public void setColorResolver(String resolver) {
+        Log.d("TestB", "setColorResolver " + resolver);
         colorEngine.removeColorChangeListeners(this);
         colorEngine.addColorChangeListeners(this, resolver);
     }
@@ -319,6 +320,8 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
     }
 
     private void applyIconAndLabel(ItemInfoWithIcon info) {
+        Log.d("TestB", "applyIconAndLabel " + info);
+
         FastBitmapDrawable iconDrawable = DrawableFactory.get(getContext()).newIcon(info);
         mBadgeColor = IconPalette.getMutedColor(getContext(), info.iconColor, 0.54f);
 

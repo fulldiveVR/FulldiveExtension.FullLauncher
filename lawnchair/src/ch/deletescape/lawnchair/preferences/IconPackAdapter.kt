@@ -20,8 +20,8 @@ package ch.deletescape.lawnchair.preferences
 import android.content.Context
 import android.content.Intent
 import android.os.Handler
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.helper.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.ItemTouchHelper
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent

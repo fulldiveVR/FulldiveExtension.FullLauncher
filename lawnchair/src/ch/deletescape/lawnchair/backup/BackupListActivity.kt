@@ -22,16 +22,15 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
 import ch.deletescape.lawnchair.settings.ui.SettingsBaseActivity
 import ch.deletescape.lawnchair.settings.ui.SettingsBottomSheet
-import ch.deletescape.lawnchair.settings.ui.SettingsBottomSheetDialog
 import com.android.launcher3.R
 import com.android.launcher3.Utilities
 
@@ -68,8 +67,9 @@ class BackupListActivity : SettingsBaseActivity(), BackupListAdapter.Callbacks {
                 != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                             Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                Snackbar.make(findViewById(android.R.id.content), R.string.read_external_storage_required,
-                        Snackbar.LENGTH_SHORT).show()
+                Snackbar
+                        .make(findViewById(android.R.id.content), R.string.read_external_storage_required,
+                              Snackbar.LENGTH_SHORT).show()
             }
             ActivityCompat.requestPermissions(this,
                     arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),

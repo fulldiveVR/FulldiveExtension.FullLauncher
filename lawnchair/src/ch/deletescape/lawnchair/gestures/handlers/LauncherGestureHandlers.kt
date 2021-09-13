@@ -22,7 +22,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.UserHandle
-import android.support.annotation.Keep
+import androidx.annotation.Keep
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -50,7 +50,7 @@ open class OpenDrawerGestureHandler(context: Context, config: JSONObject?) : Ges
         VerticalSwipeGestureHandler, StateChangeGestureHandler {
 
     override val displayName: String = context.getString(R.string.action_open_drawer)
-    override val iconResource: Intent.ShortcutIconResource by lazy { Intent.ShortcutIconResource.fromContext(context, R.mipmap.ic_allapps_adaptive) }
+    override val iconResource: Intent.ShortcutIconResource by lazy { Intent.ShortcutIconResource.fromContext(context, R.mipmap.ic_launcher) }
     override val requiresForeground = true
 
     override fun onGestureTrigger(controller: GestureController, view: View?) {

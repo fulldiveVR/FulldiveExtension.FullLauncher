@@ -20,15 +20,15 @@ package ch.deletescape.lawnchair.settings.ui.search
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import com.android.launcher3.R
 import kotlinx.android.synthetic.main.activity_settings_search.*
-import android.support.v7.util.DiffUtil
+import androidx.recyclerview.widget.DiffUtil
 import android.text.TextUtils
 import android.view.MenuItem
 import android.widget.*
@@ -55,7 +55,8 @@ class SettingsSearchActivity : SettingsBaseActivity(), SearchView.OnQueryTextLis
         val listResults = list_results
         listResults.shouldTranslateSelf = false
         listResults.adapter = searchAdapter
-        listResults.layoutManager = LinearLayoutManager(this)
+        listResults.layoutManager =
+                LinearLayoutManager(this)
         listResults.addOnScrollListener(object : RecyclerView.OnScrollListener() {
 
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {

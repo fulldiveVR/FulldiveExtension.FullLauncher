@@ -27,9 +27,9 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Process
-import android.support.v7.app.AlertDialog
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.text.TextUtils
 import android.util.DisplayMetrics
 import android.view.LayoutInflater
@@ -138,11 +138,15 @@ class EditIconActivity : SettingsBaseActivity() {
         originalIcon.setOnClickListener { onSelectIcon(null) }
 
         iconPackRecyclerView.adapter = IconPackAdapter()
-        iconPackRecyclerView.layoutManager = LinearLayoutManager(this)
+        iconPackRecyclerView.layoutManager =
+                LinearLayoutManager(this)
 
         if (component != null) {
             iconRecyclerView.adapter = iconAdapter
-            iconRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            iconRecyclerView.layoutManager =
+                    LinearLayoutManager(this,
+                                                                                        LinearLayoutManager.HORIZONTAL,
+                                                                                        false)
         } else {
             divider.visibility = View.GONE
             iconRecyclerView.visibility = View.GONE

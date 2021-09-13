@@ -25,8 +25,8 @@ import android.content.res.ColorStateList
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.os.Handler
-import android.support.v7.util.DiffUtil
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import android.text.TextUtils
 import android.util.DisplayMetrics
 import android.view.LayoutInflater
@@ -192,7 +192,7 @@ open class AppsAdapterWithShortcuts(
     class LoadingItem : Item
 
     inner class AppHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
-            View.OnClickListener, ValueAnimator.AnimatorUpdateListener {
+                                            View.OnClickListener, ValueAnimator.AnimatorUpdateListener {
 
         private val label: TextView = itemView.findViewById(R.id.label)
         private val icon: ImageView = itemView.findViewById(R.id.icon)

@@ -1,20 +1,3 @@
-/*
- *     This file is part of Lawnchair Launcher.
- *
- *     Lawnchair Launcher is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- *
- *     Lawnchair Launcher is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- *
- *     You should have received a copy of the GNU General Public License
- *     along with Lawnchair Launcher.  If not, see <https://www.gnu.org/licenses/>.
- */
-
 package ch.deletescape.lawnchair
 
 import android.app.Activity
@@ -25,7 +8,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.provider.Settings
-import android.support.annotation.Keep
+import androidx.annotation.Keep
 import ch.deletescape.lawnchair.blur.BlurWallpaperProvider
 import ch.deletescape.lawnchair.flowerpot.Flowerpot
 import ch.deletescape.lawnchair.bugreport.BugReportClient
@@ -39,7 +22,6 @@ import com.android.launcher3.BuildConfig
 import com.android.launcher3.R
 import com.android.launcher3.Utilities
 import com.android.quickstep.RecentsActivity
-import com.squareup.leakcanary.LeakCanary
 import ninja.sesame.lib.bridge.v1.SesameFrontend
 import ninja.sesame.lib.bridge.v1.SesameInitOnComplete
 import ninja.sesame.lib.bridge.v1_1.LookFeelKeys
@@ -54,18 +36,6 @@ class LawnchairApp : Application() {
 
     init {
         d("Hidden APIs allowed: ${Utilities.HIDDEN_APIS_ALLOWED}")
-    }
-
-    override fun onCreate() {
-        super.onCreate()
-        if (BuildConfig.HAS_LEAKCANARY && lawnchairPrefs.initLeakCanary) {
-            if (LeakCanary.isInAnalyzerProcess(this)) {
-                // This process is dedicated to LeakCanary for heap analysis.
-                // You should not init your app in this process.
-                return
-            }
-            LeakCanary.install(this)
-        }
     }
 
     fun onLauncherAppStateCreated() {
