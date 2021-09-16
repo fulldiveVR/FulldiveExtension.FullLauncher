@@ -1,32 +1,23 @@
-package ch.deletescape.lawnchair.appextension
+package com.android.launcher3.appextension
 
 import android.app.AlertDialog
 import android.content.Context
 import android.view.LayoutInflater
-import androidx.appcompat.widget.AppCompatRatingBar
+import android.widget.EditText
 import androidx.core.content.ContextCompat
 import com.android.launcher3.R
-import kotlin.math.roundToInt
 
-object RateUsDialogBuilder {
+object RateReportDialogBuilder {
 
-	fun show(context: Context, onPositiveClicked: (Int) -> Unit) {
-		val view = LayoutInflater.from(context).inflate(R.layout.rate_us_dialog_layout, null)
-		val ratingBar = view.findViewById<AppCompatRatingBar>(R.id.ratingBar)
-		var ratingValue = 0
-		ratingBar.setOnRatingBarChangeListener { _, value, fromUser ->
-			if (fromUser) {
-				ratingValue = value.roundToInt()
-			}
-		}
-
+	fun show(context: Context, onPositiveClicked: (String) -> Unit) {
+		val view = LayoutInflater.from(context).inflate(R.layout.rate_report_dialog_layout, null)
+		val messageEditText = view.findViewById<EditText>(R.id.messageEditText)
 		val dialog = AlertDialog.Builder(context)
 			.setView(view)
 			.setTitle(R.string.rate_us_title)
 			.setPositiveButton(R.string.rate_submit) { _, _ ->
-				onPositiveClicked.invoke(ratingValue)
+				onPositiveClicked.invoke(messageEditText.text.toString())
 			}
-			.setNegativeButton(R.string.rate_cancel) { _, _ -> }
 			.create()
 
 		dialog.setOnShowListener {

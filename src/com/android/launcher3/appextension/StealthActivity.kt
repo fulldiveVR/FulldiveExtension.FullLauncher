@@ -1,4 +1,4 @@
-package ch.deletescape.lawnchair.appextension
+package com.android.launcher3.appextension
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

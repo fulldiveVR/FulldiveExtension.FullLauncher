@@ -37,6 +37,11 @@ def tagVersionName = System.getenv("TAG_VERSION_NAME")
 def isPublicBranch = localProps.getProperty("public") == "true" || (ciBuild && publicBranches.contains(System.getenv("DRONE_BRANCH")))
 def isPublicBuild = isPublicBranch || tagVersionName != null
 
+
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.google.protobuf'
@@ -46,33 +51,26 @@ android {
     buildToolsVersion '29.0.3'
 
     signingConfigs {
-
+        release {
+            storeFile file('../keys/keys.jks')
+            storePassword System.getenv("FULLDIVE_KEYSTORE_PASSWORD")
+            keyAlias System.getenv("FULLDIVE_ALIAS")
+            keyPassword System.getenv("FULLDIVE_ALIAS_PASSWORD")
+        }
     }
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 29
 
-        if (tagVersionName != null) {
-            def major = Integer.valueOf(System.getenv("TAG_MAJOR"))
-            def minor = Integer.valueOf(System.getenv("TAG_MINOR"))
-            versionCode = major * 1000000 + minor * 10000 + Integer.valueOf(ciBuildNumber)
-            versionName = tagVersionName
-        } else if (ciBuild) {
-            versionCode = Integer.valueOf(ciBuildNumber)
-            def majorMinor = localProps.getProperty("majorMinor") ?: System.getenv("MAJOR_MINOR")
-            def drone = localProps.getProperty("public") == "true" || System.getenv("DRONE")
-            versionName = majorMinor + (drone ? "-" : ".") + ciBuildNumber
-        } else {
-            versionCode 1
-            versionName "2.0"
-        }
-//todo
+        versionCode versionMajor*10000+versionMinor*100+versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
 
         buildConfigField "boolean", "FEATURE_QUINOA", "true"
         buildConfigField "boolean", "FEATURE_SETTINGS_SEARCH", "true"
-        buildConfigField "boolean", "DEBUG_STRICT_MODE", isPublicBuild ? "false" : "true"
+        buildConfigField "boolean", "DEBUG_STRICT_MODE", isPublicBuild ? "false" : "false"
         buildConfigField "boolean", "HAS_LEAKCANARY", "false"
         buildConfigField "boolean", "FEATURE_BUG_REPORTER", "true"
 
@@ -86,7 +84,7 @@ android {
 
         def accuWeatherKey = localProps.getProperty('accu_key') ?: '"' + System.getenv("ACCU_KEY") + '"'
         buildConfigField "String", "ACCUWEATHER_KEY", accuWeatherKey
-//todo
+
         buildConfigField "String", "BRIDGE_DOWNLOAD_URL", "\"https://lawnchair.app/lawnfeed/?ref=lawnchair\""
 
         ndk {
@@ -96,17 +94,16 @@ android {
     buildTypes {
         debug {
             minifyEnabled false
-            if (ciBuild) {
-                if (System.getenv("CI_EVENT_TYPE") != "pull_request") {
-                    signingConfig signingConfigs.ci
-                }
-            }
 
             dexOptions {
                 matchingFallbacks = ['debug']
             }
-
-            buildConfigField "boolean", "HAS_LEAKCANARY", isPublicBuild ? "false" : "true"
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.outputFileName = "FullLauncher-v${android.defaultConfig.versionName}-${variant.buildType.name}.apk"
+                }
+            }
+            buildConfigField "boolean", "HAS_LEAKCANARY", "false"
         }
 
         optimized {
@@ -114,23 +111,18 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
                     'proguard.flags'
-            if (ciBuild) {
-                if (System.getenv("CI_EVENT_TYPE") != "pull_request") {
-                    signingConfig signingConfigs.ci
-                }
-            }
         }
 
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
                     'proguard.flags'
-            if (ciBuild) {
-                if (System.getenv("CI_EVENT_TYPE") != "pull_request") {
-                    signingConfig signingConfigs.ci
+            signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.outputFileName = "FullLauncher-v${android.defaultConfig.versionName}-${variant.buildType.name}.apk"
                 }
             }
-
             dexOptions {
                 matchingFallbacks = ['release']
             }
@@ -164,24 +156,19 @@ android {
             applicationId 'com.android.launcher3'
             testApplicationId 'com.android.launcher3.tests'
         }
-
+//Fulldive
         quickstep {
             dimension "default"
             applicationId 'com.fulldive.extension.launcher'
             testApplicationId 'com.android.launcher3.tests'
         }
-
+//Fulldive
         lawnchair {
             dimension "custom"
         }
 
         dev {
             dimension "build"
-            // Use v1 dev package name for compatibility testing
-            if (localProps.getProperty("v1compat") != "true") {
-                applicationIdSuffix ".dev"
-            }
-            versionNameSuffix "-dev"
         }
 
         ci {
@@ -289,7 +276,7 @@ allprojects {
 }
 
 dependencies {
-    implementation ('androidx.appcompat:appcompat:1.0.0')
+    implementation('androidx.appcompat:appcompat:1.0.0')
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

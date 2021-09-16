@@ -1,4 +1,4 @@
-package ch.deletescape.lawnchair.appextension
+package com.android.launcher3.appextension
 
 import android.app.AlertDialog
 import android.content.Context

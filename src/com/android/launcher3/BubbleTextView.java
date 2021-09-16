@@ -69,9 +69,8 @@ import java.text.NumberFormat;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * TextView that draws a bubble behind the text. We cannot use a LineBackgroundSpan
- * because we want to make the bubble taller than the text and TextView's clip is
- * too aggressive.
+ * TextView that draws a bubble behind the text. We cannot use a LineBackgroundSpan because we want
+ * to make the bubble taller than the text and TextView's clip is too aggressive.
  */
 public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, OnResumeCallback,
         ColorEngine.OnColorChangeListener {
@@ -83,7 +82,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
     private static final int DISPLAY_FOLDER = 2;
     private static final int DISPLAY_DRAWER_FOLDER = 5;
 
-    private static final int[] STATE_PRESSED = new int[] {android.R.attr.state_pressed};
+    private static final int[] STATE_PRESSED = new int[]{android.R.attr.state_pressed};
 
 
     private static final Property<BubbleTextView, Float> BADGE_SCALE_PROPERTY
@@ -193,7 +192,8 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
             colorEngine.addColorChangeListeners(this, Resolvers.WORKSPACE_ICON_LABEL);
         } else if (display == DISPLAY_ALL_APPS) {
             mHideText = prefs.getHideAllAppsAppLabels();
-            setTextSize(TypedValue.COMPLEX_UNIT_PX, isTextHidden() ? 0 : grid.allAppsIconTextSizePx);
+            setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                    isTextHidden() ? 0 : grid.allAppsIconTextSizePx);
             setCompoundDrawablePadding(grid.allAppsIconDrawablePaddingPx);
             defaultIconSize = grid.allAppsIconSizePx;
             int lines = prefs.getDrawerLabelRows();
@@ -201,7 +201,8 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
             colorEngine.addColorChangeListeners(this, Resolvers.ALLAPPS_ICON_LABEL);
         } else if (display == DISPLAY_FOLDER) {
             mHideText = prefs.getHideAppLabels();
-            setTextSize(TypedValue.COMPLEX_UNIT_PX, isTextHidden() ? 0 : grid.folderChildTextSizePx);
+            setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                    isTextHidden() ? 0 : grid.folderChildTextSizePx);
             setCompoundDrawablePadding(grid.folderChildDrawablePaddingPx);
             defaultIconSize = grid.folderChildIconSizePx;
             int lines = prefs.getHomeLabelRows();
@@ -244,7 +245,6 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
     }
 
     public void setColorResolver(String resolver) {
-        Log.d("TestB", "setColorResolver " + resolver);
         colorEngine.removeColorChangeListeners(this);
         colorEngine.addColorChangeListeners(this, resolver);
     }
@@ -320,14 +320,13 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
     }
 
     private void applyIconAndLabel(ItemInfoWithIcon info) {
-        Log.d("TestB", "applyIconAndLabel " + info);
-
         FastBitmapDrawable iconDrawable = DrawableFactory.get(getContext()).newIcon(info);
         mBadgeColor = IconPalette.getMutedColor(getContext(), info.iconColor, 0.54f);
 
         setIcon(iconDrawable);
-        if (!isTextHidden())
+        if (!isTextHidden()) {
             setText(getTitle(info));
+        }
         if (info.contentDescription != null) {
             setContentDescription(info.isDisabled()
                     ? getContext().getString(R.string.disabled_app_label, info.contentDescription)
@@ -360,7 +359,8 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
     }
 
     private CharSequence getTitle(ItemInfo info) {
-        CustomInfoProvider<ItemInfo> customInfoProvider = CustomInfoProvider.Companion.forItem(getContext(), info);
+        CustomInfoProvider<ItemInfo> customInfoProvider = CustomInfoProvider.Companion
+                .forItem(getContext(), info);
         if (customInfoProvider != null) {
             return customInfoProvider.getTitle(info);
         } else {
@@ -399,7 +399,9 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
         return drawableState;
     }
 
-    /** Returns the icon for this view. */
+    /**
+     * Returns the icon for this view.
+     */
     public Drawable getIcon() {
         return mIcon;
     }
@@ -485,6 +487,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
 
     /**
      * Draws the icon badge in the top right corner of the icon bounds.
+     *
      * @param canvas The canvas to draw to.
      */
     protected void drawBadgeIfNecessary(Canvas canvas) {
@@ -589,6 +592,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
 
     /**
      * Creates an animator to fade the text in or out.
+     *
      * @param fadeIn Whether the text should fade in or fade out.
      */
     public ObjectAnimator createTextAlphaAnimator(boolean fadeIn) {
@@ -699,7 +703,9 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver, 
     }
 
     protected void applyCompoundDrawables(Drawable icon) {
-        if (icon == null) return;
+        if (icon == null) {
+            return;
+        }
 
         // If we had already set an icon before, disable relayout as the icon size is the
         // same as before.

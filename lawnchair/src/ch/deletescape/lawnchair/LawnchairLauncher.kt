@@ -1,20 +1,3 @@
-/*
- *     This file is part of Lawnchair Launcher.
- *
- *     Lawnchair Launcher is free software: you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation, either version 3 of the License, or
- *     (at your option) any later version.
- *
- *     Lawnchair Launcher is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- *
- *     You should have received a copy of the GNU General Public License
- *     along with Lawnchair Launcher.  If not, see <https://www.gnu.org/licenses/>.
- */
-
 package ch.deletescape.lawnchair
 
 import android.app.Activity
@@ -121,15 +104,8 @@ open class LawnchairLauncher : NexusLauncherActivity(),
 
     private fun performSignatureVerification() {
         if (!verifySignature()) {
-            val message = "The \"${BuildConfig.FLAVOR_build}\" build flavor is reserved for " +
-                    "official Lawnchair distributions only. Please do not use it.\n" +
-                    "\n" +
-                    "If you're a ROM developer and including Lawnchair in your ROM, please use " +
-                    "the official apks provided as a prebuilt or change the package name so that " +
-                    "users can still update to official versions if they wish to."
             AlertDialog.Builder(this)
                     .setTitle(R.string.derived_app_name)
-                    .setMessage(message)
                     .setPositiveButton(R.string.action_apply) { _, _ -> }
                     .setCancelable(false)
                     .show().applyAccent()

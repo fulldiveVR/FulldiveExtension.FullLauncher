@@ -1,20 +1,3 @@
-/*
- * Copyright (C) 2015 The Android Open Source Project
- * Copyright (C) 2017 The MoKee Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package ch.deletescape.lawnchair.settings.ui;
 
 import android.app.Dialog;
@@ -92,6 +75,7 @@ import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.LauncherSettings.Favorites;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.appextension.PopupManager;
 import com.android.launcher3.compat.LauncherAppsCompat;
 import com.android.launcher3.notification.NotificationListener;
 import com.android.launcher3.util.ComponentKey;
@@ -100,6 +84,7 @@ import com.android.launcher3.util.ContentWriter.CommitParams;
 import com.android.launcher3.util.SettingsObserver;
 import com.android.launcher3.views.ButtonPreference;
 import com.google.android.apps.nexuslauncher.reflection.ReflectionClient;
+import gnu.trove.TLongDoubleHashMap;
 import java.io.IOException;
 import java.util.Objects;
 import java.util.Set;
@@ -183,6 +168,7 @@ public class SettingsActivity extends SettingsBaseActivity implements
         if (showSearch) {
             Toolbar toolbar = findViewById(R.id.search_action_bar);
             toolbar.setOnClickListener(this);
+            new PopupManager().onAppStarted(this);
         }
 
         if (hasPreview) {

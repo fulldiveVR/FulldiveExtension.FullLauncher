@@ -1,4 +1,4 @@
-package ch.deletescape.lawnchair.appextension
+package com.android.launcher3.appextension
 
 sealed class AppExtensionState(val id: String) {
     object START: AppExtensionState("start")

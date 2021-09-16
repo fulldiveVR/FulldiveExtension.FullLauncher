@@ -1,4 +1,4 @@
-package ch.deletescape.lawnchair.appextension
+package com.android.launcher3.appextension
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -35,7 +35,7 @@ class PopupManager {
 		val rateUsDone = sharedPreferences.getProperty(KEY_RATE_US_DONE, false)
 		val installBrowserDone = sharedPreferences.getProperty(KEY_INSTALL_BROWSER_DONE, false)
 
-		if ((!rateUsDone || !installBrowserDone) && startCounter != 0) {
+		if ((!rateUsDone || !installBrowserDone)) {
 			when (getShowingPopup(startCounter)) {
 				StartAppDialog.RateUs -> {
 					if (!rateUsDone) {
