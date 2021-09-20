@@ -6,9 +6,7 @@ buildscript {
         google()
         jcenter()
         maven { url = "https://storage.googleapis.com/r8-releases/raw" }
-        maven {
-            url = "http://office.fulldive.com:8083"
-        }
+        maven { url = "http://office.fulldive.com:8083" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.2'
@@ -16,6 +14,13 @@ buildscript {
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
+}
+
+repositories {
+    mavenCentral()
+    google()
+    jcenter()
+    maven { url "http://office.fulldive.com:8083" }
 }
 
 tasks {
@@ -65,7 +70,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
 
-        versionCode versionMajor*10000+versionMinor*100+versionPatch
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -275,6 +280,7 @@ allprojects {
         mavenCentral()
         jcenter()
         maven { url 'https://jitpack.io' }
+        maven { url 'http://office.fulldive.com:8083' }
     }
 }
 
