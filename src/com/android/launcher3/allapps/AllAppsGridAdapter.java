@@ -51,7 +51,7 @@ import com.android.launcher3.touch.ItemLongClickListener;
 import com.android.launcher3.util.PackageManagerHelper;
 
 import java.util.List;
-//todo
+
 /**
  * The grid view adapter of all the apps.
  */

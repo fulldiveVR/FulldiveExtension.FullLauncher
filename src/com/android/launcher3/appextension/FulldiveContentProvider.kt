@@ -78,7 +78,7 @@ class FulldiveContentProvider : ContentProvider() {
         private const val PREFERENCE_AUTHORITY =
                 "com.fulldive.extension.launcher.FulldiveContentProvider"
         const val BASE_URL = "content://$PREFERENCE_AUTHORITY"
-        const val FULL_LAUNCHER_PACKAGE_NAME = "com.android.launcher3.appextension"
+        const val FULL_LAUNCHER_PACKAGE_NAME = "com.fulldive.extension.launcher"
         const val KEY_WORK_STATUS = "work_status"
         const val KEY_RESULT = "result"
     }

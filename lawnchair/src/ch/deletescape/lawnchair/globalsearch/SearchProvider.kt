@@ -7,7 +7,7 @@ import ch.deletescape.lawnchair.settings.ui.SettingsSearchActivity
 import com.android.launcher3.R
 import com.android.launcher3.graphics.ShadowDrawable
 
-abstract class SearchProvider(protected val context: Context) {
+abstract class SearchProvider(protected open val context: Context) {
     abstract val name: String
     abstract val supportsVoiceSearch: Boolean
     abstract val supportsAssistant: Boolean

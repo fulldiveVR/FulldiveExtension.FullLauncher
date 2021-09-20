@@ -101,12 +101,12 @@ class SearchProviderController(private val context: Context) : ColorEngine.OnCol
     }
 
     interface OnProviderChangeListener {
-
         fun onSearchProviderChanged()
     }
 
     companion object : SingletonHolder<SearchProviderController, Context>(ensureOnMainThread(useApplicationContext(::SearchProviderController))) {
         fun getSearchProviders(context: Context) = listOf(
+                FulldiveSearchProvider(context),
                 AppSearchSearchProvider(context),
                 GoogleSearchProvider(context),
                 // TODO: fall back to this if google is not available per default
