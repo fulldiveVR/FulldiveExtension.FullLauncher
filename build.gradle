@@ -6,6 +6,9 @@ buildscript {
         google()
         jcenter()
         maven { url = "https://storage.googleapis.com/r8-releases/raw" }
+        maven {
+            url = "http://office.fulldive.com:8083"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.2'
@@ -276,6 +279,7 @@ allprojects {
 }
 
 dependencies {
+    implementation("com.snore.guard:launcher:1.4.0")
     implementation('androidx.appcompat:appcompat:1.0.0')
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
