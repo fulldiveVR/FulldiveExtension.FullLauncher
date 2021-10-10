@@ -68,8 +68,9 @@ android {
     }
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
 
+        multiDexEnabled true
         versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
@@ -259,9 +260,10 @@ android {
         }
     }
 
+    def androidJar = file('libs/framework.jar')
     gradle.projectsEvaluated {
         tasks.withType(JavaCompile) {
-            options.compilerArgs.add('-Xbootclasspath/p:lawnchair/libs/framework.jar')
+            options.compilerArgs.add("-Xbootclasspath/p:$androidJar")
         }
     }
 }
@@ -339,6 +341,7 @@ dependencies {
     androidTestImplementation 'androidx.test:rules:1.1.1'
     androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
     androidTestImplementation 'androidx.annotation:annotation:1.0.0'
+    implementation "androidx.multidex:multidex:2.0.1"
 }
 
 protobuf {
