@@ -60,10 +60,10 @@ android {
 
     signingConfigs {
         release {
-            storeFile = file("../keys/keys_stage.jks")
-            storePassword = "FbFq7H2k8AdYHLnJsp5P"
-            keyAlias = "fulldive_stage"
-            keyPassword = "UcuEEErkS6T2qCXse2gQ"
+            storeFile file('../keys/keys.jks')
+            storePassword System.getenv("FULLDIVE_KEYSTORE_PASSWORD")
+            keyAlias System.getenv("FULLDIVE_ALIAS")
+            keyPassword System.getenv("FULLDIVE_ALIAS_PASSWORD")
         }
     }
     defaultConfig {
