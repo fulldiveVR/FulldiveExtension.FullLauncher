@@ -53,7 +53,7 @@ def copySmaliLibDex(dirName) {
         into dirName
         include "lawnchair.dex"
         rename { String fileName ->
-            fileName.replace("lawnchair", "classes999")
+            fileName.replace("lawnchair", "classes2")
         }
     }
 }
