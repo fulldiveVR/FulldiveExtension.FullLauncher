@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Copyright (c) 2022 FullDive
+  ~  This program is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 3 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  This program is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_width="match_parent">
+    <Button android:hint="@string/crummy_halfway_firewood_dove" android:id="@+id/dementiaView" android:layout_height="wrap_content" android:layout_width="0dp" android:text="@string/nuzzle_inarticulate_amatory" android:textColor="@color/poole_flagging" app:layout_constraintBottom_toTopOf="@id/meteoriteLayout" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout android:gravity="bottom|center_vertical" android:id="@+id/meteoriteLayout" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/dementiaView">
+        <LinearLayout android:gravity="center_horizontal|start" android:id="@+id/concatenateLayout" android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical">
+            <LinearLayout android:gravity="center_horizontal|end" android:id="@+id/poloniumMigrantLayout" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:paddingBottom="@dimen/decompose_wrack_height" android:paddingEnd="34dp" android:paddingStart="14dp" android:paddingTop="@dimen/garage_effusive">
+                <EditText android:background="#2CB52D77" android:hint="@string/ocelot_sorority_cohomology_maroon" android:id="@+id/compatriotView" android:inputType="textMultiLine" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/slatting_lura_chevron" android:textColor="#CCE44882"/>
+            </LinearLayout>
+            <AutoCompleteTextView android:hint="@string/croydon_frost_hall" android:id="@+id/fullyView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/pyracanth_yemen_scrounge_grata"/>
+            <EditText android:background="@color/lent_treason_kindle" android:hint="@string/manning_sedition_arboreal_cultural" android:id="@+id/habeasView" android:inputType="textMultiLine" android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingTop="@dimen/ouagadougou_withstand_padding" android:text="@string/meadow_bagley_alum" android:textColor="#3E1AA3"/>
+        </LinearLayout>
+        <TextView android:background="@color/sequin_hull_amethystine" android:hint="@string/bogey_jutting_licentious_biotic" android:id="@+id/caesarView" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/irreverent_sulfuric" android:layout_marginStart="@dimen/bravura_mathias_padding" android:layout_width="wrap_content" android:text="@string/doris_servitor_clive_crazy" android:textColor="@color/thalia_citrate_advisor" android:textSize="@dimen/treasury_onyx_textsize"/>
+        <EditText android:background="@color/chloride_joliet" android:hint="@string/pooh_roughen_repertory_djakarta" android:id="@+id/duffView" android:inputType="textPersonName" android:layout_height="match_parent" android:layout_width="wrap_content" android:paddingEnd="42dp" android:paddingStart="@dimen/inheritor_grille_width" android:paddingTop="@dimen/vassal_dice_size" android:text="@string/biconnected_feldspar_hepatitis"/>
+        <CheckedTextView android:background="@color/streak_sickish_mumble" android:hint="@string/ameliorate_thoroughgoing_lucerne_fain" android:id="@+id/headsmanView" android:layout_height="match_parent" android:layout_width="wrap_content" android:paddingEnd="@dimen/satyr_rapping_height" android:paddingStart="@dimen/distortion_imperishable_size" android:text="@string/chassis_scrupulous_profound_manila" android:textColor="@color/perfecter_horrid"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

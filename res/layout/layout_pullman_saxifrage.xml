@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Copyright (c) 2022 FullDive
+  ~  This program is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 3 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  This program is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_width="match_parent">
+    <Button android:background="@color/relate_syncopate_infamous" android:hint="@string/readout_albumin_zaire_bled" android:id="@+id/downriverCrookView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/excuse_drier_procter" android:textColor="@color/lend_agrimony_compose" android:textSize="@dimen/spool_trilobite_textsize" app:layout_constraintBottom_toTopOf="@id/conventionView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <AutoCompleteTextView android:background="#21B4F742" android:hint="@string/piscataway_clergyman_mitten" android:id="@+id/conventionView" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/maneuver_featherbed_isaacson" app:layout_constraintBottom_toTopOf="@id/acousticView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/downriverCrookView"/>
+    <AutoCompleteTextView android:background="@color/foment_hightail" android:hint="@string/adkins_stipple_ephesian_guarantee" android:id="@+id/acousticView" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/lack_storefront_nutting_grandpa" android:textColor="@color/gneiss_theses" app:layout_constraintBottom_toTopOf="@id/fredricksonSpatView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/conventionView"/>
+    <TextView android:hint="@string/ashland_welles_attlee" android:id="@+id/fredricksonSpatView" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/transmogrify_wherein_sectarian" app:layout_constraintBottom_toTopOf="@id/paregoricView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/acousticView"/>
+    <TextView android:background="@color/thalia_citrate_advisor" android:hint="@string/paratroop_concertmaster_respiratory" android:id="@+id/paregoricView" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/showmen_efface_wrangle" android:textColor="@color/precess_adject" app:layout_constraintBottom_toTopOf="@id/eigenstateLayout" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/fredricksonSpatView"/>
+    <LinearLayout android:gravity="end" android:id="@+id/eigenstateLayout" android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="vertical" app:layout_constraintBottom_toTopOf="@id/marjorieLayout" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/paregoricView">
+        <AutoCompleteTextView android:background="#B0BC60F8" android:hint="@string/govern_jenny_adenoma" android:id="@+id/teratologyView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="@dimen/build_adjutant" android:text="@string/osiris_affine_authoritative_bang" android:textSize="28sp"/>
+        <TextView android:background="@color/scandium_offenbach_nehru" android:hint="@string/drawn_upshot_doldrum_atheist" android:id="@+id/taffyBimonthlyView" android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingBottom="@dimen/moonlight_session" android:text="@string/incapable_doesnt_thayer_euphemism" android:textColor="@color/metric_evangel_soffit"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:id="@+id/marjorieLayout" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:paddingBottom="@dimen/mohammed_pyrometer" android:paddingTop="@dimen/ritual_nordstrom_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/eigenstateLayout">
+        <EditText android:hint="@string/lucretia_jolla_combinatoric_bargain" android:id="@+id/dignifyView" android:inputType="textCapCharacters" android:layout_height="wrap_content" android:layout_margin="34dp" android:layout_width="wrap_content" android:text="@string/transitive_elliot_kent"/>
+        <Button android:background="@color/muskrat_taffy" android:hint="@string/participant_crud_chug" android:id="@+id/contrabandTanakaView" android:layout_height="wrap_content" android:layout_width="match_parent" android:padding="36dp" android:text="@string/suggest_arden_triac" android:textColor="@color/irreverent_insecticide_agony"/>
+        <CheckBox android:background="@color/ames_strongroom_summer" android:hint="@string/vesicular_certificate_spirogyra_mould" android:id="@+id/swingView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingBottom="@dimen/quitting_astor_padding" android:text="@string/pearce_revelry_pellucid_patrick" android:textColor="#929AA462"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

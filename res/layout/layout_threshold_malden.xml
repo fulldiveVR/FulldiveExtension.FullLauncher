@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Copyright (c) 2022 FullDive
+  ~  This program is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 3 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  This program is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_width="match_parent">
+    <LinearLayout android:gravity="center_horizontal|start" android:id="@+id/eroticLayout" android:layout_height="wrap_content" android:layout_width="@dimen/colony_passage_size" android:orientation="vertical" app:layout_constraintBottom_toTopOf="@id/ripeWhippleView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <EditText android:background="@color/cladding_azalea_cropping" android:hint="@string/chrysalis_bobolink_embroider_scab" android:id="@+id/cayleyView" android:inputType="text" android:layout_height="wrap_content" android:layout_margin="@dimen/cuff_destruct_margin" android:layout_width="match_parent" android:text="@string/vesicular_certificate_spirogyra_mould" android:textColor="@color/knauer_guilty_mosquito"/>
+        <Button android:background="@color/legging_daisy" android:hint="@string/ziegler_bechtel_albert" android:id="@+id/circumcircleView" android:layout_height="wrap_content" android:layout_margin="@dimen/eclogue_bassoon_padding" android:layout_width="wrap_content" android:text="@string/adoptive_prologue_smithereens" android:textColor="#B8315EA0"/>
+        <CheckedTextView android:background="@color/merrymake_advertise_gobble" android:hint="@string/fortescue_causate_acidic_fast" android:id="@+id/donaldFrontiersmanView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/campaign_opthalmic_seismography" android:textColor="@color/posh_exception"/>
+        <AutoCompleteTextView android:background="@color/dugout_oppression" android:hint="@string/loudspeaking_hughes_bogeyman" android:id="@+id/uniroyalHipsterView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/elastomer_thresh_tenor_everett" android:textColor="@color/employ_backtrack_treat"/>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/hellfirePettingLayout" android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <CheckedTextView android:background="@color/perspicuous_anachronistic" android:hint="@string/bryophyte_upholstery_jesuit" android:id="@+id/areawideView" android:layout_height="wrap_content" android:layout_width="0dp" android:padding="@dimen/moonlight_session" android:paddingBottom="32dp" android:text="@string/deform_sanatorium_wispy" android:textColor="@color/admixture_rueful_bumble" android:textSize="@dimen/chowder_fraser_textsize" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/antarcticaLayout" android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingBottom="@dimen/loyal_shrift_margin" android:paddingEnd="@dimen/anachronistic_piscataway_size" android:paddingStart="@dimen/quitting_astor_padding" android:paddingTop="@dimen/fredericton_paulo">
+            <EditText android:background="@color/relate_syncopate_infamous" android:hint="@string/electra_chrysler_papery" android:id="@+id/lockView" android:inputType="textPassword" android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingBottom="42dp" android:paddingEnd="@dimen/obituary_ethos_padding" android:paddingStart="@dimen/evaluable_roebuck_width" android:text="@string/plebiscite_rhubarb_waller" android:textColor="@color/dugout_oppression" app:layout_constraintBottom_toTopOf="@id/nibbleTimetableView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+            <Button android:background="@color/exalt_brakemen" android:hint="@string/algeria_startup_chard_jostle" android:id="@+id/nibbleTimetableView" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/infix_thered_charlottesville_burglary" android:textColor="#D61EEB87" app:layout_constraintBottom_toTopOf="@id/nastyView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/lockView"/>
+            <EditText android:hint="@string/divest_interferometer_storytelling" android:id="@+id/nastyView" android:inputType="textPersonName" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/cleric_central_jetting_basso" android:textColor="@color/counterrevolution_oracle" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/nibbleTimetableView"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button android:background="#1A3DD3" android:hint="@string/maxwell_caterpillar_kiosk" android:id="@+id/ginsbergView" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/blizzard_talcum_sophia" android:textColor="#1C0500"/>
+        <EditText android:hint="@string/syndicate_aperture_transfinite" android:id="@+id/smackView" android:inputType="textCapWords" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/highroad_dadaism_evolve_homologous" android:textColor="@color/lend_agrimony_compose"/>
+    </LinearLayout>
+    <Button android:background="@color/ruddy_gleeful_slav" android:hint="@string/registrant_fogging_emit" android:id="@+id/ripeWhippleView" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/paulus_pontiac_hubbub" android:textColor="@color/troublesome_universal" android:textSize="@dimen/fitzroy_bohemia_textsize" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/eroticLayout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

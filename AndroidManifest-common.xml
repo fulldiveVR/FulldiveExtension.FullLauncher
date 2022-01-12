@@ -102,6 +102,12 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name = "com.android.quickstep.interaction.DeerskinFalsettoActivity"
+            android:exported="false"
+            android:label="@string/endothelial_lysenko_cannery"
+            />
+
         <!--
         Should point to the content provider which can be used to dump Launcher3 compatible
         worspace configuration to the dump's file descriptor by using launcher_dump.proto

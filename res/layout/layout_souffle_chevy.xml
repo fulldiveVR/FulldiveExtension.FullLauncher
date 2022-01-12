@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Copyright (c) 2022 FullDive
+  ~  This program is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 3 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  This program is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_width="match_parent">
+    <Button android:hint="@string/ottoman_workaday_florence_deluge" android:id="@+id/slapdashView" android:layout_height="wrap_content" android:layout_width="0dp" android:text="@string/adonis_roadbed_protrusion_imperfect" android:textColor="@color/thunderbolt_flea" android:textSize="@dimen/olson_accreditation_textsize" app:layout_constraintBottom_toTopOf="@id/stannicView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView android:background="@color/barbital_cunard" android:hint="@string/secant_lipid_feudatory_lunchtime" android:id="@+id/stannicView" android:layout_height="wrap_content" android:layout_width="@dimen/habitat_perspective_size" android:paddingTop="24dp" android:text="@string/febrile_goober_imbibe" android:textColor="@color/agone_anybodyd_alistair" android:textSize="@dimen/ward_endemic_textsize" app:layout_constraintBottom_toTopOf="@id/agwayLayout" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/slapdashView"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/agwayLayout" android:layout_height="wrap_content" android:layout_width="0dp" app:layout_constraintBottom_toTopOf="@id/circumcircleView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/stannicView">
+        <LinearLayout android:gravity="bottom" android:id="@+id/indeterminableChristendomLayout" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" app:layout_constraintBottom_toTopOf="@id/gibbonWetlandView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:background="#8B025DB0" android:hint="@string/aluminate_insupportable_anomie" android:id="@+id/topgallantView" android:layout_height="match_parent" android:layout_width="wrap_content" android:text="@string/butyrate_bashful_lycopodium_asynchronous" android:textColor="@color/lend_agrimony_compose" android:textSize="18sp"/>
+            <CheckBox android:background="#AD20DA" android:hint="@string/hookworm_tilde_piteous" android:id="@+id/talonView" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/exhumation_british_margin" android:layout_marginTop="@dimen/pickaxe_waylaid_padding" android:layout_width="wrap_content" android:text="@string/votive_sunburn_scurvy" android:textColor="#83BE1085"/>
+            <CheckBox android:background="#476292" android:hint="@string/counterrevolutionary_caller_lithography" android:id="@+id/kenyaWecoView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/orphic_affricate_episcopalian_doghouse" android:textColor="@color/daffy_amateurish_thursday" android:textSize="@dimen/consignee_argonne_textsize"/>
+            <CheckBox android:background="@color/wayward_pobox_thebes" android:hint="@string/schmidt_shore_trapezoid" android:id="@+id/psychophysiologyCallerView" android:layout_height="match_parent" android:layout_width="wrap_content" android:text="@string/manumitted_losable_turtleneck_fantasist" android:textColor="@color/gloom_grown"/>
+            <LinearLayout android:gravity="center_horizontal|end" android:id="@+id/miltonicLayout" android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical" android:paddingBottom="@dimen/perceptual_prohibition_height" android:paddingTop="@dimen/insubstantial_pyramid_padding">
+                <Button android:background="@color/sizzle_burley" android:hint="@string/privacy_area_hartley" android:id="@+id/serumView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/addendum_reptilian_pyrometry" android:textColor="@color/grubby_hiss"/>
+                <Button android:hint="@string/risk_highest_viewport" android:id="@+id/thriveResumptionView" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/biconnected_feldspar_hepatitis" android:textColor="#A97D10" android:textSize="@dimen/upsurge_collateral_textsize"/>
+                <Button android:hint="@string/paulus_pontiac_hubbub" android:id="@+id/areawideView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/entrench_bobcat_hydrostatic_coralline" android:textColor="@color/ansi_industrialism_aluminate"/>
+            </LinearLayout>
+        </LinearLayout>
+        <EditText android:background="@color/exalt_brakemen" android:hint="@string/hindrance_zagreb_elijah_smattering" android:id="@+id/gibbonWetlandView" android:inputType="phone" android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="@dimen/exhumation_british_margin" android:text="@string/stickleback_pleasant_accredit_incise" android:textColor="@color/workforce_trigonal" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/indeterminableChristendomLayout"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText android:background="@color/pontific_tapir" android:hint="@string/greta_reforestation_singapore_hookup" android:id="@+id/circumcircleView" android:inputType="textCapWords" android:layout_height="wrap_content" android:layout_width="@dimen/vestry_excusable_margin" android:text="@string/practical_lykes_furtherance" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/agwayLayout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

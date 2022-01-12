@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Copyright (c) 2022 FullDive
+  ~  This program is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 3 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  This program is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_width="match_parent">
+    <EditText android:hint="@string/around_hermes_marcus_yapping" android:id="@+id/corrosiveTypographerView" android:inputType="textVisiblePassword" android:layout_height="wrap_content" android:layout_width="0dp" android:paddingBottom="@dimen/woodcock_peepy_width" android:paddingEnd="@dimen/staphylococcus_illicit_size" android:paddingStart="30dp" android:paddingTop="@dimen/guesswork_rototill" android:text="@string/proserpine_known_batten_incest" android:textColor="@color/donovan_acapulco" android:textSize="@dimen/dessicate_datsun_textsize" app:layout_constraintBottom_toTopOf="@id/babelWaalsView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <EditText android:background="@color/scabious_phrasemake_nocturne" android:hint="@string/paulus_pontiac_hubbub" android:id="@+id/babelWaalsView" android:inputType="phone" android:layout_height="wrap_content" android:layout_margin="@dimen/handleable_lantern_padding" android:layout_width="match_parent" android:text="@string/associable_scope_wabash_firsthand" android:textColor="@color/jason_determine_stan" android:textSize="@dimen/jigging_clank_textsize" app:layout_constraintBottom_toTopOf="@id/harryLayout" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/corrosiveTypographerView"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/harryLayout" android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintBottom_toTopOf="@id/niobeContingentView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/babelWaalsView">
+        <CheckBox android:hint="@string/quietus_cathy_bennington_spokesperson" android:id="@+id/insteadView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/genitive_mammary_watchmake_grasp" android:textColor="@color/missy_naivete" app:layout_constraintBottom_toTopOf="@id/graciousPotbellyView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        <EditText android:hint="@string/door_underivable_nostalgic" android:id="@+id/graciousPotbellyView" android:inputType="textPassword" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/prolongate_vehicle_cropping_dispersion" android:textColor="@color/legging_daisy" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/insteadView"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <CheckedTextView android:background="@color/northern_carolina_strange" android:hint="@string/oklahoma_oilseed_titanium_domingo" android:id="@+id/niobeContingentView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingEnd="@dimen/ntis_cleavage_padding" android:paddingStart="@dimen/krishna_arson" android:text="@string/loudspeaking_hughes_bogeyman" android:textColor="@color/apple_bedbug" app:layout_constraintBottom_toTopOf="@id/riemannSpanishLayout" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/harryLayout"/>
+    <LinearLayout android:gravity="center" android:id="@+id/riemannSpanishLayout" android:layout_height="wrap_content" android:layout_width="430dp" android:orientation="vertical" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/niobeContingentView">
+        <Button android:background="@color/valhalla_journalese" android:hint="@string/youngish_poach_pontificate" android:id="@+id/crosshatchView" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/colby_weco_margin" android:layout_marginStart="@dimen/gate_operon_size" android:layout_width="match_parent" android:paddingBottom="32dp" android:paddingEnd="@dimen/severe_fervid_padding" android:paddingStart="@dimen/gauntlet_boatmen_padding" android:paddingTop="@dimen/condemn_flaky_margin" android:text="@string/participant_crud_chug" android:textColor="@color/lidding_careful"/>
+        <EditText android:background="@color/mylar_aggressive_venezuela" android:hint="@string/resort_eyelet_enlargeable_muskegon" android:id="@+id/puzzleGoetheView" android:inputType="textCapWords" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/campion_rustle_milord_sicily" android:textColor="#3D3AA8"/>
+        <CheckedTextView android:background="@color/pushover_gulp" android:hint="@string/smokestack_dietrich_parsley_pail" android:id="@+id/everettMuklukView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/colonist_equipoise_survive_skullcap" android:textColor="@color/poole_flagging"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

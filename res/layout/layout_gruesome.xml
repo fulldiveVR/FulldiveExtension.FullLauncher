@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Copyright (c) 2022 FullDive
+  ~  This program is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 3 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  This program is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent" android:layout_width="match_parent">
+    <LinearLayout android:gravity="center_horizontal|end" android:id="@+id/mummifyWhateverLayout" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" app:layout_constraintBottom_toTopOf="@id/donaldFrontiersmanView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:gravity="bottom|center_vertical" android:id="@+id/inheritLayout" android:layout_height="wrap_content" android:layout_margin="@dimen/insect_coral" android:layout_width="wrap_content" android:orientation="horizontal">
+            <CheckedTextView android:background="@color/habit_flashy" android:hint="@string/doggone_smyrna_jeffersonian_euglena" android:id="@+id/groundView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/caliphate_savant_extract" android:textColor="@color/orleans_atoll_schizoid"/>
+            <AutoCompleteTextView android:background="@color/printmake_dossier" android:hint="@string/sandpile_patriot_block_birefringent" android:id="@+id/travisView" android:layout_height="match_parent" android:layout_width="wrap_content" android:text="@string/ferocity_reed_canaveral" android:textColor="@color/thalia_citrate_advisor" android:textSize="24sp"/>
+            <CheckedTextView android:background="@color/siliceous_camelot" android:hint="@string/dunk_clergymen_practicable_eligible" android:id="@+id/prostituteView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/debbie_isthmus_chauvinism" android:textColor="@color/scandium_offenbach_nehru"/>
+            <CheckedTextView android:background="@color/cloddish_alpine_ecosystem" android:hint="@string/exemplify_thistledown_brawl" android:id="@+id/statuetteEverettView" android:layout_height="match_parent" android:layout_width="wrap_content" android:text="@string/rutledge_tanager_exoskeleton_hundredfold" android:textColor="@color/tenney_fearful_party"/>
+            <TextView android:background="#85C640" android:hint="@string/nuzzle_inarticulate_amatory" android:id="@+id/venetoTautologyView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="48dp" android:text="@string/calypso_poesy_anguish_transducer" android:textColor="@color/penalty_aniline_steak" android:textSize="18sp"/>
+            <Button android:background="@color/incubus_concerti" android:hint="@string/broody_electrician_convulse_keller" android:id="@+id/foursquareView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/chromatograph_indecomposable_manufacture" android:textColor="@color/sough_tennis_antacid" android:textSize="@dimen/inviable_cirmcumferential_textsize"/>
+        </LinearLayout>
+        <Button android:hint="@string/immovable_kinky_flint_bowen" android:id="@+id/concatenateView" android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingBottom="@dimen/capping_jackpot" android:paddingEnd="@dimen/eclogue_bassoon_padding" android:paddingStart="@dimen/yardstick_testamentary_width" android:text="@string/dripping_morphemic_carrara_notocord" android:textColor="#2D8163"/>
+    </LinearLayout>
+    <Button android:background="@color/oldsmobile_embark" android:hint="@string/fabricate_gunnery_aboriginal" android:id="@+id/donaldFrontiersmanView" android:layout_height="wrap_content" android:layout_width="@dimen/roughneck_voracious" android:text="@string/ccny_sawbelly_rove" android:textColor="@color/posh_exception" android:textSize="18sp" app:layout_constraintBottom_toTopOf="@id/eachGraffView" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/mummifyWhateverLayout"/>
+    <CheckedTextView android:background="@color/polaron_skeletal" android:hint="@string/almost_lair_habit" android:id="@+id/eachGraffView" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/postmortem_contaminate_policeman_regis" android:textColor="@color/scum_mabel" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/donaldFrontiersmanView"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
