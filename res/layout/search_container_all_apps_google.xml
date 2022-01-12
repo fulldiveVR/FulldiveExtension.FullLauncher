@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~     Copyright (C) 2021 Lawnchair Team.
+  ~
+  ~     This file is part of Lawnchair Launcher.
+  ~
+  ~     Lawnchair Launcher is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     Lawnchair Launcher is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with Lawnchair Launcher.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
 <com.google.android.apps.nexuslauncher.qsb.AllAppsQsbLayout android:layout_gravity="center|top" android:id="@+id/search_container_all_apps" android:background="@drawable/bg_qsb_click_feedback" android:layout_width="fill_parent" android:layout_height="@dimen/qsb_widget_height" android:layout_centerHorizontal="true" android:contentDescription="@string/search" android:translationY="30.0dip"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <ImageView android:layout_gravity="start|center" android:id="@id/g_icon" android:layout_height="fill_parent" android:layout_width="@dimen/qsb_mic_width" android:src="@drawable/ic_super_g_color" android:layout_marginTop="-6.0dip" android:layout_marginBottom="-6.0dip" android:scaleType="center" />
